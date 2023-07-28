@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+    </script>
+    <style>
+        input[type='text'],input[type='email']
+        {
+            color:red;
+            border-radius: 7px;
+            padding: 4px 8px;
+
+        }
+        select 
+        {
+            width:200px;
+            color:rgb(255, 238, 0);
+            border-radius: 7px;
+            padding: 4px 8px;
+            background-color: black;
+            
+        }
+        input:hover
+        {
+            border-left: 2px solid orange;
+            border-right: 2px solid rgb(0, 255, 34);
+            border-bottom: 2px solid rgb(55, 0, 255);
+            border-top: 2px solid rgb(255, 0, 179);
+        }
+        select:hover
+        {
+            border-left: 2px solid orange;
+            border-right: 2px solid rgb(0, 255, 34);
+            border-bottom: 2px solid rgb(55, 0, 255);
+            border-top: 2px solid rgb(255, 0, 179);
+        }
+        input[type='radio']:checked 
+        {
+            width:20px;
+            height:20px;
+            background-color: blue;
+        }
+    .row::after
+    {
+        content:" ";
+        display:table;
+        clear:both;
+    }
+    .col1
+    {
+        float: left;
+       width:60%;
+       margin-top: 20px;
+    }
+    .col2
+    {
+        float: left;
+        width:35%;
+        margin-top: 20px;
+    }
+
+    </style>
+    <div>
+        <div class="row">
+            <div class="col1">
+                <label>First_Name:</label>
+            </div>
+            <div class="col2">
+                <input type="text" name="fname" placeholder="Enter first name">
+            </div>
+        <div class="row">
+            <div class="col1">
+                <label>Last_Name:</label>
+            </div>
+            <div class="col2">
+                <input type="text" name="fname" placeholder="Enter last name">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col1">
+                <label>Gmail:</label>
+            </div>
+            <div class="col2">
+                <input type="email" name="fname" placeholder="Enter Gmail">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col1">
+                <label>Gender:</label>
+            </div>
+            <div class="col2">
+                <input type="radio" name="gen" value="male">Male<br>
+                <span class="c"></span>
+                <input type="radio" name="gen" value="female">Female
+                <span class="c"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col1">
+                <label>Branch:</label>
+            </div>
+            <div class="col2">
+                <select>
+                    <option value="cse">CSE</option>
+                    <option value="ece">ECE</option>
+                    <option value="eee">EEE</option>
+                    <option value="mech">MECH</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
