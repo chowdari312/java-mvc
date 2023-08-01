@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input
+        {
+            width:300px;
+            padding: 10px 10px;
+            border-radius: 10px;
+            border-left: 3px solid blue;
+            border-top: 3px solid greenyellow ;
+            border-bottom: 3px solid rgb(254, 1, 1);
+            border-right:3px solid red;
+            color: black;
+            font-family: cursive;
+            box-shadow: 20px;
+            font-size: 18px;
+        }
+        input:hover{
+            border-left: 3px dotted blue;
+            border-top: 3px dotted rgb(168, 110, 188) ;
+            border-bottom: 3px dotted rgb(3, 222, 251);
+            border-right:2px dotted red;
+        }
+        button
+        {
+             margin-left: 40px;
+             padding: 10px 25px;
+             border-radius: 10px;
+             box-shadow: 20px;
+             cursor:pointer;
+             border:3px solid yellow;
+             font-family: cursive;
+             background-image:url('https://img.freepik.com/free-photo/anime-girl-street-with-yellow-dress_1340-27759.jpg?t=st=1690897243~exp=1690900843~hmac=57666ca1c1278cf444bb93f8ede082ad1db6d56dbf554bef340bf04df88cb0cd&w=360') ;
+            
+
+        }
+        button:hover{
+            border-radius: 48px 0px;
+            border-left: 3px solid blue;
+            border-top: 3px solid greenyellow ;
+            border-bottom: 3px solid rgb(3, 222, 251);
+            border-right:2px solid red;
+            background-color: aliceblue;
+           
+
+        }
+        body
+        {
+            display: flex;
+            justify-content: center;
+            margin-top: 145px;
+            align-items: center;
+            background-image: url('https://images3.alphacoders.com/726/72627.jpg');
+        }
+       
+        .d1
+        {
+            width:650px;
+            height: 400px;
+            background-color: black;
+            border:5px solid yellow;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+           
+
+        }
+        lable
+        {
+            color:white;
+            font-size: 20px;
+            font-family: cursive;
+            
+        }
+        .c1
+        {
+            float:left;
+            
+        }
+        .c
+        {
+            float:left;
+            width:200px;
+            margin-left: 70px;
+            margin-bottom: 50px;
+        }
+        .r
+        {
+           display:table;
+        }
+    </style>
+</head>
+<body>
+        <div class="d1">
+         <div class="r">
+            <div class="c">
+                <lable>Number:</lable>
+            </div>
+            <div class="c1">
+                <input type="text" required id="a" placeholder="           Enter The Value.....">
+            </div>
+         </div>
+         <div class="r">
+            <div class="c">
+                <lable>Result:</lable>
+            </div>
+            <div class="c1">
+                <input type="text" id="b">
+            </div>
+         </div><br>
+         <div class="hi">
+        <button onclick="plain()">Palindrome</button>
+        <button onclick="fabo()">Fibonacci</button>
+        <button onclick="prime()">Prime</button>
+        <button onclick="fact()">Factorial</button>
+         </div>
+        </div>
+    <script>
+        function fact()
+        {
+            if(isNaN(document.getElementById('a').value))
+            {
+                alert("Invalid Input please Enter Valid Input");
+            }
+            let c= parseInt(document.getElementById('a').value);
+            let r=1;
+            for(let i=c ;i>0;i--)
+            {
+                r=r*i;
+            }
+            document.getElementById('b').value="The Factorial of "+c+" is ==> "+r;
+        }
+        function prime()
+        {
+            if(isNaN(document.getElementById('a').value))
+            {
+                alert("Invalid Input please Enter Valid Input");
+            }
+            let c= parseInt(document.getElementById('a').value);
+            for(let i=2;i<=c;i++)
+            {
+                let l=0;
+                if(i%2==0)
+                {
+                    l=1;
+                }
+                if(l==1)
+                {
+                    document.getElementById('b').value=c+" is Not a Primenumber";
+                }
+                else
+                {
+                    document.getElementById('b').value=c+" is a Primenumber";
+                }
+            }
+        }
+        function fabo()
+        {
+            if(isNaN(document.getElementById('a').value))
+            {
+                alert("Invalid Input please Enter Valid Input");
+            }
+            let c= parseInt(document.getElementById('a').value);
+            let a=0,b=1;
+            let d=a+b;
+            for(let i=3;i<=c;i++)
+            {
+                a=b;
+                b=d;
+                d=a+b;
+            }
+            document.getElementById('b').value="The Value is "+d;
+        }
+        function plain()
+        {
+            let c= document.getElementById('a').value;
+            let s= c.split('').reverse().join('');
+            if(s==c)
+            {
+                document.getElementById('b').value= "It is Palindrome";
+            }
+            else
+            {
+                document.getElementById('b').value= "It is Not Palindrome";
+            }
+            
+        }
+    </script>
+</body>
+</html>
